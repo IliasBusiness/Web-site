@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SiteRapide – Votre site web professionnel à 50 €</title>
+<style>
+:root{--bg:#fff;--bg2:#f4f3ff;--tx:#13122b;--mu:#5f5c80;--ac:#5b4bff;--ac2:#c026d3;--ac3:#06b6d4;--ac4:#f59e0b;--bd:#e5e3f7;--ok:#16a34a;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0a1a;--bg2:#12112b;--tx:#f3f2ff;--mu:#a5a2c9;--bd:#27244a;--card:#181638;--ok:#4ade80}}
+:root[data-theme="dark"]{--bg:#0b0a1a;--bg2:#12112b;--tx:#f3f2ff;--mu:#a5a2c9;--bd:#27244a;--card:#181638;--ok:#4ade80}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+.w{max-width:1080px;margin:auto;padding:0 20px;position:relative}
+section{padding:80px 0;position:relative}
+.alt{background:var(--bg2)}
+h1{font-size:clamp(2.2rem,6.5vw,3.8rem);line-height:1.08;margin:.3em 0;letter-spacing:-.03em}
+h2{font-size:clamp(1.6rem,4.2vw,2.4rem);margin:0 0 .4em;letter-spacing:-.02em;text-align:center}
+.sub{color:var(--mu);text-align:center;max-width:640px;margin:0 auto 40px}
+.g{background:linear-gradient(120deg,var(--ac),var(--ac2),var(--ac3));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--ac),var(--ac2));color:#fff;padding:16px 30px;border-radius:14px;font-weight:700;text-decoration:none;border:0;font-size:1.02rem;cursor:pointer;box-shadow:0 10px 30px rgba(91,75,255,.35);transition:.25s;animation:pu 2.6s infinite}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+@keyframes pu{50%{box-shadow:0 10px 44px rgba(192,38,211,.55)}}
+.top{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac4));color:#fff;text-align:center;padding:9px 12px;font-size:.88rem;font-weight:600}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:800;font-size:1.25rem}
+.hero{position:relative;overflow:hidden;padding:30px 0 90px;text-align:center}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:fl 12s ease-in-out infinite;z-index:0}
+.b1{width:340px;height:340px;background:var(--ac);top:-60px;left:-80px}
+.b2{width:300px;height:300px;background:var(--ac2);top:80px;right:-70px;animation-delay:-4s}
+.b3{width:260px;height:260px;background:var(--ac3);bottom:-60px;left:35%;animation-delay:-8s}
+@keyframes fl{50%{transform:translate(40px,-30px) scale(1.15)}}
+.hero .w{z-index:1}
+.badge{display:inline-block;background:var(--card);border:1px solid var(--bd);padding:7px 16px;border-radius:99px;font-size:.86rem;color:var(--mu)}
+.hero p.lead{color:var(--mu);max-width:600px;margin:0 auto 28px;font-size:1.18rem}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.chips span{background:var(--card);border:1px solid var(--bd);padding:7px 14px;border-radius:99px;font-size:.88rem}
+.mock{margin:56px auto 0;position:relative;max-width:640px;animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.br{background:var(--card);border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(91,75,255,.28);text-align:left}
+.dots{padding:10px 14px;background:var(--bg2);display:flex;gap:6px;border-bottom:1px solid var(--bd)}
+.dots i{width:10px;height:10px;border-radius:50%;background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.mh{height:150px;background:linear-gradient(120deg,var(--ac),var(--ac2),var(--ac3));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:800}
+.ml{padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ml i{height:60px;border-radius:10px;background:var(--bg2);display:block}
+.ph{position:absolute;right:-24px;bottom:-34px;width:120px;background:var(--card);border:5px solid var(--tx);border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.ph .mh{height:80px;font-size:.9rem;background:linear-gradient(120deg,var(--ac4),var(--ac2))}
+.ph .ml{grid-template-columns:1fr;padding:10px}.ph .ml i{height:30px}
+.mq{background:var(--tx);color:var(--bg);overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:700}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;text-align:center}
+.stats div{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px}
+.stats b{font-size:2.3rem;display:block;line-height:1.1}
+.stats span{color:var(--mu);font-size:.9rem}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:26px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(91,75,255,.18);border-color:var(--ac)}
+.card h3{margin:.3em 0}.card p{color:var(--mu);margin:0}
+.ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;color:#fff}
+.c1{background:linear-gradient(135deg,#5b4bff,#8b7bff)}.c2{background:linear-gradient(135deg,#c026d3,#f472b6)}.c3{background:linear-gradient(135deg,#06b6d4,#22d3ee)}.c4{background:linear-gradient(135deg,#f59e0b,#fbbf24)}.c5{background:linear-gradient(135deg,#16a34a,#4ade80)}.c6{background:linear-gradient(135deg,#ef4444,#fb923c)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px;background:var(--card);border-radius:18px;overflow:hidden}
+th,td{padding:15px;border-bottom:1px solid var(--bd);text-align:center}
+th:first-child,td:first-child{text-align:left}
+.us{background:rgba(91,75,255,.1);font-weight:700}
+.no{color:#ef4444}.yes{color:var(--ok)}
+.gal{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.tp{border-radius:16px;overflow:hidden;border:1px solid var(--bd);background:var(--card);cursor:pointer;transition:.3s}
+.tp:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 20px 40px rgba(0,0,0,.18)}
+.tp .h{height:110px;display:flex;align-items:center;justify-content:center;font-size:2.4rem}
+.tp .b{padding:14px;display:grid;gap:8px}.tp .b i{height:9px;border-radius:5px;background:var(--bd);display:block}.tp .b i:first-child{width:70%}
+.tp .t{padding:0 14px 14px;font-weight:700;display:flex;justify-content:space-between}
+.tp .t span{color:var(--mu);font-weight:400;font-size:.85rem}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.ba,.cfg{grid-template-columns:1fr!important}section{padding:56px 0}.ph{display:none}}
+.ba>div{border-radius:18px;padding:26px;border:1px solid var(--bd);background:var(--card)}
+.ba .bad{border-color:#ef444466}.ba .good{border-color:#16a34a88;box-shadow:0 0 0 4px rgba(22,163,74,.1)}
+.ba li{margin:8px 0;list-style:none}.ba ul{padding:0;margin:0}
+.steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.st{text-align:center}.st .n{width:56px;height:56px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.4rem;background:linear-gradient(135deg,var(--ac),var(--ac2))}
+.st p{color:var(--mu);margin:0}
+.offer{max-width:540px;margin:auto;text-align:center;border:2px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(135deg,var(--ac),var(--ac2),var(--ac4)) border-box;border-radius:24px;padding:34px;position:relative;box-shadow:0 30px 70px rgba(192,38,211,.22)}
+.tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--ac2),var(--ac4));color:#fff;padding:6px 18px;border-radius:99px;font-weight:700;font-size:.85rem;white-space:nowrap}
+.big{font-size:4.4rem;font-weight:800;line-height:1}
+.old{text-decoration:line-through;color:var(--mu)}
+.bonus{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px dashed var(--bd);text-align:left}
+.bonus b{color:var(--ok);white-space:nowrap}
+.tc{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.stars{color:#f59e0b;letter-spacing:2px}
+.who{display:flex;align-items:center;gap:10px;margin-top:14px;font-weight:700;font-size:.92rem}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.cfg{display:grid;gap:30px;grid-template-columns:1fr 1fr;align-items:start}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,select{width:100%;padding:13px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+input[type=color]{height:48px;padding:4px}
+.pv{padding:36px 20px;text-align:center}
+.pv h4{font-size:1.6rem;margin:0 0 6px}.pv p{margin:0 0 16px;color:var(--mu)}
+.pv span{display:inline-block;color:#fff;padding:11px 22px;border-radius:12px;font-weight:600}
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}details p{color:var(--mu);margin:10px 0 0}
+.fin{background:linear-gradient(135deg,var(--ac),var(--ac2),var(--ac3));color:#fff;text-align:center;border-radius:28px;padding:60px 24px}
+.fin .btn{background:#fff;color:var(--ac);animation:none}
+.fin p{max-width:520px;margin:0 auto 26px;opacity:.92}
+.sb{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--bd);display:none;justify-content:space-between;align-items:center;gap:10px;z-index:20;transform:translateY(110%);transition:.3s}
+.sb.on{transform:none}
+@media(max-width:700px){.sb{display:flex}}
+.sb .btn{padding:11px 18px;animation:none}
+footer{padding:30px 0 90px;text-align:center;color:var(--mu);font-size:.85rem;border-top:1px solid var(--bd)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none}}
+#pg{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac4));z-index:50}
+#gl{position:fixed;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;background:radial-gradient(circle,rgba(192,38,211,.15),transparent 65%);pointer-events:none;z-index:1}
+.fe{position:absolute;font-size:1.8rem;opacity:.7;animation:fe 7s ease-in-out infinite;z-index:0}@keyframes fe{50%{transform:translateY(-26px) rotate(15deg)}}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.tabs button{background:var(--card);color:var(--tx);border:1px solid var(--bd);padding:10px 16px;border-radius:99px;font:inherit;font-weight:600;cursor:pointer;transition:.25s}
+.tabs button:hover{transform:translateY(-3px)}.tabs button.on{background:linear-gradient(120deg,var(--ac),var(--ac2));color:#fff;border-color:transparent}
+#demo{max-width:760px;margin:auto;transition:opacity .2s}
+.url{font-size:.75rem;color:var(--mu);margin-left:8px}
+.dh{padding:46px 20px;text-align:center;color:#fff}.dh h3{font-size:2rem;margin:.1em 0}.dh p{margin:0 0 16px;opacity:.92}.dh span{background:#fff;color:#13122b;padding:10px 22px;border-radius:99px;font-weight:700;display:inline-block}
+.de{font-size:3rem;animation:bob 4s ease-in-out infinite}
+.ds{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:20px}.ds div{background:var(--bg2);border-radius:12px;padding:16px;text-align:center;font-weight:600}
+.dr{padding:4px 20px 18px;text-align:center;color:var(--mu);font-style:italic}
+.df{background:var(--bg2);padding:12px;text-align:center;font-size:.85rem;color:var(--mu)}
+.calc,.guar{max-width:620px;margin:auto}
+.calc{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:28px}
+input[type=range]{padding:0;accent-color:var(--ac2)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;text-align:center}.res b{font-size:2rem;display:block}.res span{color:var(--mu);font-size:.85rem}
+.note{font-size:.78rem;color:var(--mu);text-align:center;margin:14px 0 0}
+.ck{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.ck div{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;transition:.3s}.ck div:hover{transform:translateX(6px);border-color:var(--ok)}.ck div:before{content:"✓ ";color:var(--ok);font-weight:800}
+.guar{text-align:center;border-radius:24px;padding:40px 26px;background:linear-gradient(135deg,rgba(22,163,74,.12),rgba(6,182,212,.12));border:1px solid var(--ok)}
+.guar p{color:var(--mu)}.sh{font-size:4rem;animation:bob 3s ease-in-out infinite;display:block}
+.cf{position:fixed;top:-12px;width:10px;height:14px;z-index:99;animation:cf 2.2s ease-in forwards;pointer-events:none}
+@keyframes cf{to{transform:translateY(105vh) rotate(720deg);opacity:.6}}
+section{overflow:hidden}
+section::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;top:30px;right:-80px;background:radial-gradient(circle,rgba(192,38,211,.22),transparent 70%);pointer-events:none}
+section:nth-of-type(even)::before{right:auto;left:-80px;background:radial-gradient(circle,rgba(6,182,212,.25),transparent 70%)}
+section:nth-of-type(3n)::before{background:radial-gradient(circle,rgba(245,158,11,.25),transparent 70%)}
+.alt{background-color:var(--bg2);background-image:radial-gradient(rgba(91,75,255,.14) 1.5px,transparent 1.5px);background-size:22px 22px}
+.hero{background:linear-gradient(180deg,rgba(91,75,255,.1),rgba(192,38,211,.05) 60%,transparent)}
+h2:after{content:"";display:block;width:70px;height:5px;border-radius:5px;margin:10px auto 0;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac4))}
+.card{border-top:4px solid var(--ac)}
+.grid .card:nth-child(6n+2){border-top-color:var(--ac2)}.grid .card:nth-child(6n+3){border-top-color:var(--ac3)}.grid .card:nth-child(6n+4){border-top-color:var(--ac4)}.grid .card:nth-child(6n+5){border-top-color:var(--ok)}.grid .card:nth-child(6n){border-top-color:#ef4444}
+.tc .card{position:relative}.tc .card:before{content:"“";position:absolute;top:2px;right:18px;font-size:4.5rem;line-height:1;color:var(--ac2);opacity:.25}
+.dh{position:relative;overflow:hidden}.dh>*{position:relative}
+.dh:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.16);top:-100px;right:-60px}
+.dh:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.12);bottom:-80px;left:-40px}
+.fin{position:relative;overflow:hidden}.fin>*{position:relative}
+.fin:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.12);top:-140px;left:-80px}
+.fin:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(245,158,11,.3);bottom:-110px;right:-60px}
+.ill{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:30px}
+.ill figure{margin:0;text-align:center;background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;transition:.3s}
+.ill figure:hover{transform:translateY(-6px) rotate(1deg);box-shadow:0 18px 40px rgba(91,75,255,.2)}
+.ill svg{width:100%;max-width:230px;animation:bob 5s ease-in-out infinite}.ill figure:nth-child(2) svg{animation-delay:-1.5s}.ill figure:nth-child(3) svg{animation-delay:-3s}
+.ill figcaption{font-weight:700;margin-top:8px}
+footer{border-top:4px solid transparent;border-image:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3),var(--ac4)) 1}
+</style>
+</head>
+<body>
+<div class="top">🎉 Offre de lancement : 4 bonus offerts pour toute commande aujourd’hui</div>
+<div class="hero">
+<i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+<div class="w">
+<nav><div class="logo">🚀 Site<span class="g">Rapide</span></div><a class="btn" style="padding:10px 18px;animation:none" href="#commande">Commencer</a></nav>
+<span class="badge">⭐ La façon la plus simple d’avoir un site pro</span>
+<h1>Votre site web professionnel<br>pour seulement <span class="g">50 €</span></h1>
+<p class="lead">Arrêtez de perdre des clients qui cherchent vos services sur Google. Nous créons votre site moderne, rapide et sans abonnement.</p>
+<a class="btn" href="#commande">Créer mon site maintenant →</a>
+<div class="chips"><span>✓ Paiement unique</span><span>✓ Livré en quelques jours</span><span>✓ Satisfait ou remboursé</span></div>
+<div class="mock"><div class="br"><div class="dots"><i></i><i></i><i></i></div><div class="mh">Votre activité, enfin en ligne ✨</div><div class="ml"><i></i><i></i><i></i></div></div>
+<div class="ph"><div class="mh">Mobile</div><div class="ml"><i></i><i></i></div></div></div>
+</div></div>
+
+<div class="mq"><div>✂️ Coiffeurs &nbsp;•&nbsp; 🍽️ Restaurants &nbsp;•&nbsp; 🔧 Artisans &nbsp;•&nbsp; 📸 Photographes &nbsp;•&nbsp; 💪 Coachs &nbsp;•&nbsp; 🛍️ Boutiques &nbsp;•&nbsp; 🎨 Créatifs &nbsp;•&nbsp; 🏡 Immobilier &nbsp;•&nbsp; 💆 Bien-être &nbsp;•&nbsp; ✂️ Coiffeurs &nbsp;•&nbsp; 🍽️ Restaurants &nbsp;•&nbsp; 🔧 Artisans &nbsp;•&nbsp; 📸 Photographes &nbsp;•&nbsp; 💪 Coachs &nbsp;•&nbsp; 🛍️ Boutiques &nbsp;•&nbsp; 🎨 Créatifs &nbsp;•&nbsp; 🏡 Immobilier &nbsp;•&nbsp; 💆 Bien-être &nbsp;•&nbsp;</div></div>
+
+<section><div class="w rv">
+<div class="ill">
+<figure><svg viewBox="0 0 200 140"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b4bff"/><stop offset="1" stop-color="#c026d3"/></linearGradient></defs><circle cx="100" cy="70" r="62" fill="#5b4bff" opacity=".12"/><rect x="40" y="25" width="120" height="78" rx="8" fill="url(#a1)"/><rect x="48" y="33" width="104" height="62" rx="4" fill="#fff"/><rect x="56" y="41" width="50" height="8" rx="4" fill="#c026d3"/><rect x="56" y="55" width="88" height="5" rx="2.5" fill="#cfc9f7"/><rect x="56" y="65" width="70" height="5" rx="2.5" fill="#cfc9f7"/><rect x="56" y="76" width="28" height="12" rx="6" fill="#06b6d4"/><path d="M25 108h150l-12 10H37z" fill="#8a86b8"/><circle cx="165" cy="30" r="9" fill="#f59e0b"/></svg><figcaption>Un site qui vous ressemble</figcaption></figure>
+<figure><svg viewBox="0 0 200 140"><circle cx="100" cy="70" r="62" fill="#c026d3" opacity=".12"/><rect x="68" y="10" width="64" height="120" rx="12" fill="#2b2a55"/><rect x="73" y="20" width="54" height="100" rx="7" fill="#fff"/><rect x="73" y="20" width="54" height="30" rx="7" fill="#c026d3"/><rect x="79" y="58" width="30" height="10" rx="5" fill="#f9a8d4"/><rect x="91" y="73" width="30" height="10" rx="5" fill="#a5f3fc"/><rect x="79" y="88" width="24" height="10" rx="5" fill="#fde68a"/><circle cx="150" cy="40" r="12" fill="#ef4444"/><text x="150" y="45" font-size="14" text-anchor="middle" fill="#fff">♥</text><circle cx="48" cy="90" r="8" fill="#06b6d4"/></svg><figcaption>Vos clients vous contactent</figcaption></figure>
+<figure><svg viewBox="0 0 200 140"><circle cx="100" cy="70" r="62" fill="#06b6d4" opacity=".14"/><path d="M100 14c20 18 24 46 16 74H84c-8-28-4-56 16-74z" fill="#fff" stroke="#2b2a55" stroke-width="3"/><circle cx="100" cy="52" r="10" fill="#06b6d4"/><path d="M84 88l-16 14 4-26zM116 88l16 14-4-26z" fill="#c026d3"/><path d="M92 92h16l-8 28z" fill="#f59e0b"/><circle cx="40" cy="30" r="3" fill="#f59e0b"/><circle cx="160" cy="46" r="4" fill="#c026d3"/><circle cx="150" cy="110" r="3" fill="#5b4bff"/></svg><figcaption>Votre activité décolle</figcaption></figure>
+</div>
+<div class="stats">
+<div><b class="g">50 €</b><span>une fois, pour toujours</span></div>
+<div><b class="g">0 €</b><span>d’abonnement</span></div>
+<div><b class="g">100 %</b><span>adapté au mobile</span></div>
+<div><b class="g">1</b><span>modification offerte</span></div>
+</div></div></section>
+
+<section class="alt"><div class="w rv">
+<h2>Sans site, vous laissez vos clients à la concurrence</h2>
+<p class="sub">Aujourd’hui, on vérifie sur Internet avant d’appeler. Voyez la différence.</p>
+<div class="ba">
+<div class="bad"><h3>😟 Sans site web</h3><ul><li>❌ Introuvable sur Google</li><li>❌ Moins de crédibilité</li><li>❌ Clients qui choisissent un concurrent</li><li>❌ Dépendance aux réseaux sociaux</li></ul></div>
+<div class="good"><h3>😍 Avec votre site</h3><ul><li>✅ Visible 24 h/24, 7 j/7</li><li>✅ Image professionnelle et rassurante</li><li>✅ Des demandes de contact directes</li><li>✅ Vous maîtrisez votre image</li></ul></div>
+</div></div></section>
+
+<section><div class="w rv">
+<h2>Pourquoi payer 10 fois plus cher ?</h2>
+<p class="sub">Comparez par vous-même : même résultat, sans les délais ni la facture qui explose.</p>
+<div class="scroll"><table>
+<tr><th></th><th>Agence</th><th>Freelance</th><th class="us">SiteRapide</th></tr>
+<tr><td>Prix</td><td class="no">1 500 € et +</td><td class="no">400 à 800 €</td><td class="us yes">50 €</td></tr>
+<tr><td>Délai</td><td>3 à 8 semaines</td><td>1 à 3 semaines</td><td class="us">Quelques jours</td></tr>
+<tr><td>Adapté mobile</td><td>✓</td><td>Parfois</td><td class="us yes">✓ Toujours</td></tr>
+<tr><td>Abonnement obligatoire</td><td class="no">Souvent</td><td class="no">Parfois</td><td class="us yes">Jamais</td></tr>
+<tr><td>Bonus offerts</td><td class="no">✗</td><td class="no">✗</td><td class="us yes">✓ 4 bonus</td></tr>
+<tr><td>Garantie remboursement</td><td class="no">✗</td><td class="no">✗</td><td class="us yes">✓</td></tr>
+</table></div>
+</div></section>
+
+<section class="alt"><div class="w rv">
+<h2>Tout est inclus, rien de superflu</h2>
+<p class="sub">Un site clair qui donne envie à vos visiteurs de vous contacter.</p>
+<div class="grid">
+<div class="card"><div class="ic c1">🎨</div><h3>Design soigné</h3><p>Un rendu moderne, aux couleurs de votre activité.</p></div>
+<div class="card"><div class="ic c2">📱</div><h3>Mobile & ordinateur</h3><p>Parfait sur tous les écrans de vos clients.</p></div>
+<div class="card"><div class="ic c3">⚡</div><h3>Ultra rapide</h3><p>Un site léger : vos visiteurs restent jusqu’au bout.</p></div>
+<div class="card"><div class="ic c4">🔍</div><h3>Prêt pour Google</h3><p>Structure pensée pour être bien référencé.</p></div>
+<div class="card"><div class="ic c5">🔒</div><h3>Sécurisé</h3><p>Connexion sécurisée pour rassurer vos visiteurs.</p></div>
+<div class="card"><div class="ic c6">💬</div><h3>Formulaire de contact</h3><p>Vos clients vous écrivent en un clic.</p></div>
+</div></div></section>
+
+<section><div class="w rv">
+<h2>Voyez un vrai exemple pour votre métier</h2>
+<p class="sub">Choisissez votre métier : un site d’exemple s’affiche instantanément.</p>
+<div class="tabs" id="tabs"></div>
+<div class="br" id="demo"></div>
+<p style="text-align:center;margin-top:26px"><button class="btn" id="use">Je veux ce site-là →</button></p>
+<div class="gal" id="gal" hidden></div>
+</div></section>
+
+<section class="alt"><div class="w rv">
+<h2>Comment ça marche</h2>
+<p class="sub">Trois étapes, zéro prise de tête.</p>
+<div class="steps">
+<div class="st"><div class="n">1</div><h3>Vous remplissez le formulaire</h3><p>Nom, activité, couleurs : 2 minutes.</p></div>
+<div class="st"><div class="n">2</div><h3>Nous créons votre site</h3><p>Vous recevez une version à valider.</p></div>
+<div class="st"><div class="n">3</div><h3>Vous êtes en ligne</h3><p>Une modification offerte, puis publication.</p></div>
+</div></div></section>
+
+<section><div class="w rv">
+<h2>Ils nous ont fait confiance</h2>
+<p class="sub">Des retours de clients satisfaits.</p>
+<div class="tc">
+<div class="card"><div class="stars">★★★★★</div><p>«&nbsp;J’hésitais à cause du prix des agences. Ici, mon site était prêt en 3 jours et je reçois déjà des demandes.&nbsp;»</p><div class="who"><span class="av c2">S</span>Sophie L. · Coiffeuse</div></div>
+<div class="card"><div class="stars">★★★★★</div><p>«&nbsp;Simple, rapide, propre. Pour 50 €, je ne m’attendais pas à un tel rendu.&nbsp;»</p><div class="who"><span class="av c3">K</span>Karim B. · Plombier</div></div>
+<div class="card"><div class="stars">★★★★★</div><p>«&nbsp;Le meilleur rapport qualité-prix. Je recommande à tous les indépendants.&nbsp;»</p><div class="who"><span class="av c4">M</span>Marie D. · Photographe</div></div>
+</div></div></section>
+
+<section class="alt"><div class="w rv">
+<h2>L’offre de lancement</h2>
+<p class="sub">Commandez maintenant et profitez de 4 bonus offerts.</p>
+<div class="offer"><span class="tag">🔥 Offre de lancement</span>
+<div class="old">Valeur totale : 340 €</div>
+<div class="big g">50 €</div>
+<p style="color:var(--mu);margin:4px 0 18px">paiement unique · aucun abonnement</p>
+<div class="bonus"><span>✓ Site complet sur mesure</span><span class="old">150 €</span></div>
+<div class="bonus"><span>🎁 Optimisation Google</span><b>OFFERT</b></div>
+<div class="bonus"><span>🎁 Logo texte simple</span><b>OFFERT</b></div>
+<div class="bonus"><span>🎁 1 modification gratuite</span><b>OFFERT</b></div>
+<div class="bonus" style="border:0"><span>🎁 Guide « mettre son site en ligne »</span><b>OFFERT</b></div>
+<p style="margin:22px 0 14px"><a class="btn" href="#commande">Je profite de l’offre →</a></p>
+<p style="font-size:.88rem;color:var(--mu);margin:0">🛡️ Garantie satisfait ou remboursé</p>
+</div></div></section>
+
+<section class="alt"><div class="w rv">
+<h2>Combien rapporte un site ?</h2>
+<p class="sub">Faites le calcul : un seul client supplémentaire peut suffire à le rentabiliser.</p>
+<div class="calc">
+<label for="g">Gain moyen par client : <b id="gv">80</b> €</label><input id="g" type="range" min="20" max="500" step="10" value="80">
+<label for="k">Clients par mois grâce au site : <b id="kv">3</b></label><input id="k" type="range" min="1" max="15" value="3">
+<div class="res"><div><b class="g" id="r1">240 €</b><span>gagnés par mois (estimation)</span></div><div><b class="g" id="r2">7 jours</b><span>pour rentabiliser vos 50 €</span></div></div>
+<p class="note">Simulation indicative : les résultats varient selon votre activité.</p>
+</div></div></section>
+
+<section><div class="w rv">
+<h2>Ce que vous recevez concrètement</h2>
+<p class="sub">Pas de mauvaise surprise : tout est listé.</p>
+<div class="ck"><div>Design sur mesure</div><div>Version mobile</div><div>Page d’accueil percutante</div><div>Section services</div><div>Galerie photos</div><div>Formulaire de contact</div><div>Adresse & horaires</div><div>Liens réseaux sociaux</div><div>Optimisation Google</div><div>Logo texte simple</div><div>1 modification offerte</div><div>Guide de mise en ligne</div></div>
+</div></section>
+
+<section class="alt"><div class="w rv"><div class="guar">
+<span class="sh">🛡️</span><h2>Zéro risque pour vous</h2>
+<p>Vous validez votre site avant publication. Une modification est offerte. Et si vous n’êtes pas satisfait, vous êtes remboursé. Vous n’avez rien à perdre, tout à gagner.</p>
+<p style="margin-top:22px"><a class="btn" href="#commande">Je me lance sans risque →</a></p>
+</div></div></section>
+
+<div id="pg"></div><div id="gl"></div>
+<section id="commande"><div class="w rv">
+<h2>Découvrez votre futur site en direct</h2>
+<p class="sub">Remplissez les champs, regardez l’aperçu se construire, puis envoyez votre commande.</p>
+<div class="cfg">
+<div>
+<label for="n">Nom de votre activité</label><input id="n" value="Mon Entreprise">
+<label for="t">Votre slogan</label><input id="t" value="Un service de qualité, près de chez vous">
+<label for="s">Type de site</label>
+<select id="s"><option>Site vitrine</option><option>Portfolio</option><option>Restaurant / commerce</option><option>Prestataire de services</option></select>
+<label for="c">Couleur principale</label><input id="c" type="color" value="#5b4bff">
+<label for="m">Votre email</label><input id="m" type="email" placeholder="vous@exemple.fr">
+<p style="margin-top:20px"><button class="btn" id="go" style="width:100%">Commander mon site — 50 €</button></p>
+</div>
+<div class="br"><div class="dots"><i></i><i></i><i></i></div>
+<div class="pv"><div id="pe" style="font-size:2.6rem"></div><h4 id="pn"></h4><p id="pt"></p><span id="pb">Nous contacter</span><p style="margin-top:18px;font-size:.8rem" id="ps"></p></div></div>
+</div></div></section>
+
+<section class="alt"><div class="w rv" style="max-width:740px">
+<h2>Questions fréquentes</h2><p class="sub">On répond avant que vous ne les posiez.</p>
+<details><summary>Y a-t-il des frais cachés ?</summary><p>Non. 50 € est un paiement unique pour la création du site. L’hébergement et un nom de domaine personnalisé restent à votre charge si vous en souhaitez un.</p></details>
+<details><summary>Combien de temps pour recevoir mon site ?</summary><p>Quelques jours après réception de vos informations.</p></details>
+<details><summary>Et si le résultat ne me plaît pas ?</summary><p>Une modification est incluse, et si vous n’êtes toujours pas satisfait, nous vous remboursons.</p></details>
+<details><summary>Dois-je savoir coder ?</summary><p>Pas du tout. Vous nous donnez vos informations, nous nous occupons de tout.</p></details>
+<details><summary>Suis-je propriétaire de mon site ?</summary><p>Oui, il est à vous et vous pouvez demander des évolutions ensuite.</p></details>
+</div></section>
+
+<section><div class="w rv"><div class="fin">
+<h2 style="color:#fff">Prêt à lancer votre présence en ligne ?</h2>
+<p>Chaque jour sans site, ce sont des clients qui vont voir ailleurs. Lancez-vous pour le prix d’un repas au restaurant.</p>
+<a class="btn" href="#commande">Créer mon site pour 50 € →</a>
+</div></div></section>
+
+<footer><div class="w">© 2026 SiteRapide · Mentions légales · CGV · Contact</div></footer>
+<div class="sb" id="sb"><b>Site pro · 50 €</b><a class="btn" href="#commande">Commander</a></div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var T=[["✂️","Coiffeur","#c026d3","linear-gradient(135deg,#c026d3,#f472b6)"],["🍽️","Restaurant","#ef4444","linear-gradient(135deg,#ef4444,#fb923c)"],["🔧","Artisan","#f59e0b","linear-gradient(135deg,#f59e0b,#fbbf24)"],["📸","Photographe","#06b6d4","linear-gradient(135deg,#06b6d4,#5b4bff)"],["💪","Coach","#16a34a","linear-gradient(135deg,#16a34a,#4ade80)"],["🛍️","Boutique","#5b4bff","linear-gradient(135deg,#5b4bff,#c026d3)"]];
+$('gal').innerHTML=T.map(function(t,i){return '<div class="tp" data-i="'+i+'"><div class="h" style="background:'+t[3]+'">'+t[0]+'</div><div class="b"><i></i><i></i><i></i></div><div class="t">'+t[1]+'<span>Voir →</span></div></div>'}).join('');
+function up(){$('pn').textContent=$('n').value||'Votre activité';$('pt').textContent=$('t').value;$('ps').textContent=$('s').value;$('pb').style.background=$('c').value;$('pn').style.color=$('c').value}
+['n','t','s','c'].forEach(function(i){$(i).addEventListener('input',up)});up();
+document.querySelectorAll('.tp').forEach(function(e){e.addEventListener('click',function(){var t=T[e.dataset.i];$('c').value=t[2];$('n').value=t[1]+' Pro';$('pe').textContent=t[0];up();$('commande').scrollIntoView({behavior:'smooth'})})});
+$('go').addEventListener('click',function(){var m=$('m').value;if(!m||m.indexOf('@')<1){$('m').focus();return}
+var b='Bonjour, je souhaite commander mon site à 50 €.\nActivité : '+$('n').value+'\nSlogan : '+$('t').value+'\nType : '+$('s').value+'\nCouleur : '+$('c').value+'\nMon email : '+m;
+location.href='mailto:contact@votre-domaine.fr?subject='+encodeURIComponent('Commande site web')+'&body='+encodeURIComponent(b)});
+var D=[["✂️","Coiffeur","#c026d3","#f472b6","Salon Éclat","Coupes tendance, couleurs sur mesure","Prendre rendez-vous",["💇 Coupe & brushing","🎨 Coloration","💆 Soins"],"Un accueil parfait et une coupe superbe !","Léa"],
+["🍽️","Restaurant","#ef4444","#fb923c","Chez Marcel","Cuisine maison, produits du terroir","Réserver une table",["🥗 Entrées","🍝 Plats du jour","🍰 Desserts"],"Un vrai régal, on revient !","Thomas"],
+["🔧","Plombier","#0891b2","#5b4bff","Dépann’Eau","Intervention rapide, devis gratuit","Demander un devis",["🚿 Dépannage","🔥 Chauffe-eau","🛁 Salle de bain"],"Venu en 1 h, travail soigné.","Karim"],
+["📸","Photographe","#5b4bff","#06b6d4","Studio Lumière","Vos plus beaux souvenirs en images","Voir le portfolio",["💍 Mariage","👨‍👩‍👧 Famille","🏢 Entreprise"],"Des photos magnifiques, merci !","Marie"],
+["💪","Coach sportif","#16a34a","#4ade80","Fit & Force","Atteignez vos objectifs, à votre rythme","Séance d’essai",["🏋️ Musculation","🏃 Cardio","🥦 Nutrition"],"Résultats visibles en 2 mois.","Julien"],
+["🛍️","Boutique","#c026d3","#f59e0b","La Petite Boutique","Des créations uniques, livrées chez vous","Découvrir la boutique",["👗 Nouveautés","🎁 Cadeaux","💝 Coups de cœur"],"Superbes produits, envoi rapide.","Camille"],
+["🏡","Immobilier","#1d4ed8","#06b6d4","Maison & Co","Trouvez le bien qui vous ressemble","Voir les annonces",["🏠 Vente","🔑 Location","📐 Estimation"],"Accompagnement au top.","Nadia"],
+["💆","Bien-être","#0d9488","#a78bfa","Zen Attitude","Un moment rien que pour vous","Réserver un soin",["💆 Massage","🧖 Soin visage","🕯️ Relaxation"],"Un vrai moment de détente.","Sophie"]];
+var cur=0;
+$('tabs').innerHTML=D.map(function(d,i){return '<button data-i="'+i+'">'+d[0]+' '+d[1]+'</button>'}).join('');
+function show(i){cur=i;var d=D[i];document.querySelectorAll('#tabs button').forEach(function(b,j){b.classList.toggle('on',j==i)});$('demo').style.opacity=0;setTimeout(function(){var u=d[4].normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z]/g,'');$('demo').innerHTML='<div class="dots"><i></i><i></i><i></i><span class="url">🔒 www.'+u+'.fr</span></div><div class="dh" style="background:linear-gradient(120deg,'+d[2]+','+d[3]+')"><div class="de">'+d[0]+'</div><h3>'+d[4]+'</h3><p>'+d[5]+'</p><span>'+d[6]+'</span></div><div class="ds">'+d[7].map(function(s){return '<div>'+s+'</div>'}).join('')+'</div><div class="dr"><span class="stars">★★★★★</span><br>«&nbsp;'+d[8]+'&nbsp;» — '+d[9]+'</div><div class="df">📍 Près de chez vous · 📞 01 23 45 67 89 · ✉️ Contact</div>';$('demo').style.opacity=1},180)}
+document.querySelectorAll('#tabs button').forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i)})});show(0);
+function boom(){for(var i=0;i<36;i++){var e=document.createElement('i');e.className='cf';e.style.left=Math.random()*100+'vw';e.style.background=['#5b4bff','#c026d3','#06b6d4','#f59e0b','#16a34a'][i%5];e.style.animationDelay=Math.random()*.4+'s';document.body.appendChild(e);setTimeout(function(x){x.remove()},2800,e)}}
+$('use').addEventListener('click',function(){var d=D[cur];$('c').value=d[2];$('n').value=d[4];$('t').value=d[5];$('pe').textContent=d[0];up();boom();$('commande').scrollIntoView({behavior:'smooth'})});
+$('go').addEventListener('click',boom);
+function calc(){var g=+$('g').value,k=+$('k').value,m=g*k,j=Math.max(1,Math.ceil(50/(m/30)));$('gv').textContent=g;$('kv').textContent=k;$('r1').textContent=m+' €';$('r2').textContent=j+' jour'+(j>1?'s':'')}
+$('g').addEventListener('input',calc);$('k').addEventListener('input',calc);calc();
+addEventListener('scroll',function(){var h=document.documentElement;$('pg').style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'});
+addEventListener('mousemove',function(e){var x=$('gl');x.style.left=e.clientX+'px';x.style.top=e.clientY+'px'});
+var H=document.querySelector('.hero');['💼','✨','🚀','💡','⭐','🎯'].forEach(function(s,i){var e=document.createElement('span');e.className='fe';e.textContent=s;e.style.left=(6+i*17)+'%';e.style.top=(18+(i%3)*26)+'%';e.style.animationDelay=(-i*1.5)+'s';H.appendChild(e)});
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:.1});rv.forEach(function(e){o.observe(e)})}else{rv.forEach(function(e){e.classList.add('in')})}
+addEventListener('scroll',function(){$('sb').classList.toggle('on',scrollY>600)});
+</script>
+</body>
+</html>
